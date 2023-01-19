@@ -564,10 +564,12 @@ function Editor(props) {
       summary: typeof activeInfo?.detail !== "object" ? activeInfo.detail : "",
       other: typeof activeInfo?.detail !== "object" ? activeInfo.detail : "",
     });
+    // eslint-disable-next-line
   }, [activeSectionKey]);
 
   useEffect(() => {
     setActiveInformation(information[sections[activeSectionKey]]);
+    // eslint-disable-next-line
   }, [information]);
 
   useEffect(() => {
@@ -590,6 +592,7 @@ function Editor(props) {
       github: activeInfo.details[activeDetailIndex]?.github || "",
       college: activeInfo.details[activeDetailIndex]?.college || "",
     });
+    // eslint-disable-next-line
   }, [activeDetailIndex]);
 
   return (
